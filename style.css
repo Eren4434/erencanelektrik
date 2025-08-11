@@ -107,4 +107,20 @@ label{font-size:.95rem}
   .header .brand img{ height: 56px; }
   .header .brand::after{ font-size: clamp(14px, 4vw, 20px); }
 }
+/* Mobilde sabit görünen Mağaza butonu */
+.mobile-shop{ display:none; }
+
+@media (max-width:900px){
+  .menu{ display:none; }          /* mevcut davranış kalsın */
+  .header .nav{ gap:16px; }
+  .mobile-shop{
+    display:inline-flex;
+    margin-left:auto;             /* sağa yasla */
+    padding:10px 14px;
+    border-radius:12px;
+    background:linear-gradient(90deg,var(--primary),var(--primary2));
+    color:#fff;
+  }
+}
+
 /* === /Logo yanında yazı === */
