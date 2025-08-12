@@ -138,7 +138,7 @@ label{font-size:.95rem}
 /* Mobil: daha hızlı ama akıcı */
 @media (max-width: 900px){
   .marquee .track{
-    animation-duration: 12s !important;  /* 28s -> 12s = ~2.3x hızlı */
+    animation-duration: 28s !important;  /* 28s -> 12s = ~2.3x hızlı */
   }
   /* İsteğe bağlı: GPU yardımıyla akıcılık */
   .slide img{
