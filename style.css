@@ -124,16 +124,28 @@ label{font-size:.95rem}
 
 /* === /Logo yanında yazı === */
 
-/* Mobilde slaytları adım adım (snap) ilerlet ve daha hızlı yap */
+/* GPU ile akıcı scroll ve mobilde daha hızlı */
+@keyframes scroll{
+  from{ transform: translate3d(0,0,0); }
+  to{   transform: translate3d(-50%,0,0); }
+}
+
+.marquee .track{
+  will-change: transform;                /* performans */
+  animation: scroll 28s linear infinite; /* masaüstü: mevcut hız */
+}
+
+/* Mobil: daha hızlı ama akıcı */
 @media (max-width: 900px){
-  /* Referanslar */
-  #referanslar .marquee .track{
-    animation: scroll 8s steps(20) infinite !important;
+  .marquee .track{
+    animation-duration: 12s !important;  /* 28s -> 12s = ~2.3x hızlı */
   }
-  /* İş ortakları */
-  #isortaklari .marquee .track{
-    animation: scroll 8s steps(24) infinite !important;
+  /* İsteğe bağlı: GPU yardımıyla akıcılık */
+  .slide img{
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 }
+
 
 
