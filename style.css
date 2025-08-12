@@ -58,7 +58,7 @@ footer{padding:36px 0;border-top:1px solid rgba(255,255,255,.06);color:var(--mut
 @media (max-width: 900px){ .hero .wrap{grid-template-columns:1fr;gap:22px} .menu{display:none} }
 @media (max-width: 900px) {
   .marquee .track {
-    animation-duration: 14s; /* 28s’ten 14s’e düşürür, 2 kat hızlanır */
+    animation-duration: 8s; /* 28s’ten 8s’e düşürür, 2 kat hızlanır */
   }
 }
 
