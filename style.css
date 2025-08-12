@@ -123,29 +123,3 @@ label{font-size:.95rem}
 }
 
 /* === /Logo yanında yazı === */
-
-/* GPU ile akıcı scroll ve mobilde daha hızlı */
-@keyframes scroll{
-  from{ transform: translate3d(0,0,0); }
-  to{   transform: translate3d(-50%,0,0); }
-}
-
-.marquee .track{
-  will-change: transform;                /* performans */
-  animation: scroll 28s linear infinite; /* masaüstü: mevcut hız */
-}
-
-/* Mobil: daha hızlı ama akıcı */
-@media (max-width: 900px){
-  .marquee .track{
-    animation-duration: 28s !important;  /* 28s -> 12s = ~2.3x hızlı */
-  }
-  /* İsteğe bağlı: GPU yardımıyla akıcılık */
-  .slide img{
-    backface-visibility: hidden;
-    transform: translateZ(0);
-  }
-}
-
-
-
