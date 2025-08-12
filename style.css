@@ -124,12 +124,16 @@ label{font-size:.95rem}
 
 /* === /Logo yanında yazı === */
 
-/* MOBİLDE SLAYT HIZINI ARTIR — kesin override */
+/* Mobilde slaytları adım adım (snap) ilerlet ve daha hızlı yap */
 @media (max-width: 900px){
-  #referanslar .marquee .track,
-  #isortaklari .marquee .track,
-  .marquee .track{
-    animation: scroll 10s linear infinite !important; /* 28s -> 10s ≈ 3x hızlı */
+  /* Referanslar */
+  #referanslar .marquee .track{
+    animation: scroll 12s steps(20) infinite !important;
+  }
+  /* İş ortakları */
+  #isortaklari .marquee .track{
+    animation: scroll 12s steps(24) infinite !important;
   }
 }
+
 
