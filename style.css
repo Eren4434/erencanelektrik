@@ -128,11 +128,11 @@ label{font-size:.95rem}
 @media (max-width: 900px){
   /* Referanslar */
   #referanslar .marquee .track{
-    animation: scroll 12s steps(20) infinite !important;
+    animation: scroll 24s steps(20) infinite !important;
   }
   /* İş ortakları */
   #isortaklari .marquee .track{
-    animation: scroll 12s steps(24) infinite !important;
+    animation: scroll 24s steps(24) infinite !important;
   }
 }
 
